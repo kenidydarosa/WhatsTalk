@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Roboto&display=swap');
+
+:root {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: #f0f2f5;
+  position: absolute;
+  color: #534d4d;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 30px;
+  box-shadow: 1px 1px 3px #ccc;
+  font-size: 17px;
+  & > img {
+    max-height: 2.5rem;
+    margin-right: 0.2rem;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-width: 70%;
+  flex-grow: 1;
+  margin-top: 58px;
+}
+
+#mensagens {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 75%;
+  background-color: #efeae2;
+  flex-grow: 1;
+  width: 100%;
+  font-size: 0.9rem;
+  padding: 25px;
+  align-items: flex-end;
+  background-image: url(assets/bg-chat-tile-dark_a4be512e7195b6b733d9110b408f075d.png);
+}
+
+.mensagem {
+  background-color: #fefefe;
+  color: #494646;
+  box-shadow: 1px 1px 3px #ccc;
+  margin: 5px;
+  min-width: 70px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  max-width: 90%;
+  & > span {
+    max-width: 90%;
+    display: flex;
+    word-break: break-all;
+  }
+}
+.horario {
+  font-size: 10px;
+  margin-top: 7px;
+}
+/* #mensagens > .mensagem:last-of-type {
+  background-color: #f1edc9;
+} */
+
+#envio-mensagens {
+  padding: 15px 5px;
+  display: flex;
+  justify-content: center;
+  min-width: 40%;
+  max-height: 150px;
+  background-color: #f0f2f5;
+  & > input {
+    width: 90%;
+    border: none;
+    outline: none;
+    box-shadow: 1px 1px 3px #ccc;
+    border-radius: 12px;
+    padding: 10px 20px;
+    white-space: inherit;
+  }
+  & > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #fff;
+    color: #54656f;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 12px;
+    margin-left: 0.5rem;
+    box-shadow: 1px 1px 3px #ccc;
+
+    &:hover {
+      transition: all 0.5s ease;
+      background-color: #0c683d;
+      color: #fff;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    width: 100%;
+    margin-top: 58px;
+  }
+  #envio-mensagens {
+    padding: 15px 15px;
+  }
+}
